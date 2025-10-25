@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+passlib
+uvicorn
+python-jose
+python-multipart
+pymysql
+python-dotenv
+argon2_cffi
+cryptography
+requests
+fastapi-mail==1.4.1
+itsdangerous
+pydantic[email]
+
+

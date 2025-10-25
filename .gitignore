@@ -1,0 +1,6 @@
+__pycache__
+BookStore
+routers/__pycache__
+utils/__pycache__
+MySQLDatabase.sql
+.env

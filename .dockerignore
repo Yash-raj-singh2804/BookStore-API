@@ -1,0 +1,5 @@
+BookStore/routers/__pycache__/
+BookStore/utils/__pycache__/
+
+BookStore/.env
+BookStore/MySQLDatabase.sql
