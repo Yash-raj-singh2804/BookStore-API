@@ -1,38 +1,11 @@
+version: "3.9"
+
 services:
-  fastapi:
+  web:
     build: .
     container_name: fastapi_app
-    restart: always
-    depends_on:
-      - db
     ports:
       - "8000:8000"
     env_file:
       - .env
-    volumes:
-      - ./BookStore:/app/BookStore
-    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-
-  db:
-    image: mysql:8.0
-    container_name: mysql_db
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
-      retries: 5
-
-volumes:
-  mysql_data:
-
-
-  
+    depends_on: []
