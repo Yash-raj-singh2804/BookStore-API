@@ -7,7 +7,6 @@ import models
 app = FastAPI(title="Fern & Folio",
                   description="""
     Welcome to the Fern & Folio!. A Book store API built using FastAPI, MySQL, etc.
-    I have made this project to improve my API building skills and as a project to add in my
 
     Features:  
     - Browse books with search, filter, sort, and pagination  
@@ -28,3 +27,4 @@ app.include_router(user.router)
 app.include_router(cart.router)
 app.include_router(order.router)
 app.include_router(genre.router)
+
