@@ -10,7 +10,7 @@ url_link = os.getenv("URL_LINK")
 fm = FastMail(conf)
 
 async def send_verification_email(email: str, token: str):
-    verify_link = f"url_link/verify/{token}"
+    verify_link = f"{url_link}/verify/{token}"
 
     html = f"""
     <h3>Welcome to Fern & Folio 📚</h3>
@@ -43,5 +43,6 @@ async def send_email_order(customer_name: str, order_id: int, total_amount: int,
         body=html,
         subtype="html"
     )
+
 
     await fm.send_message(message)
